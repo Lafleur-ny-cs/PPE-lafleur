@@ -12,10 +12,10 @@
 			
 			</header>
 			<nav>
-				<a href="Page-acceuil.html">Accueil</a>
-				<a href="produit.php">Nos Produits</a>
-				
+				<a href="admin.php">Accueil</a>
+				<a href="produit-admin.php">Nos Produits</a>
 				<a href="boutiques.php">Nos Boutiques</a>
+				<a href="Page-acceuil.html">Déconnexion</a>
 			</nav>
 				<form id="formChoix" method="post" action="produit-admin.php">
 					<fieldset>
@@ -185,6 +185,7 @@
 						
 					}
 				?>
+				
 		</div>
 	</body>
 </html>
