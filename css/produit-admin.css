@@ -1,7 +1,8 @@
 @CHARSET "ISO-8859-1";
 body{
 	 background-image: url("../img/prairies-fleuries3.jpg");
-	 background-attachement:fixted;
+	 background-attachement:fixed;
+	 background-repeat: no-repeat;
 	
 	 
 }
@@ -10,7 +11,7 @@ body{
 div.site{
 	
 	width: 1400px;
-	height : 1800px;
+	height : 2500px;
 	margin : 0px auto ;
 	background  : linear-gradient(#00B64F, white 100%);
 	
@@ -99,10 +100,14 @@ table.compo{
 	width:1000px;
 	margin-top:50px;
 }
-table.boutique{
+table.boutiques{
 	border : 2px solid yellow;
 	font-family:comic sans ms;
 	margin:0px auto;
-	width:1000px;
+	width:1200px;
 	margin-top:50px;
+}
+td.boutique{
+	width:310px;
+	height:290px;
 }
