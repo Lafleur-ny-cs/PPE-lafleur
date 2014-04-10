@@ -1,0 +1,98 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	 background-image: url("../img/prairies-fleuries3.jpg");
+	 background-attachement:fixted;
+	
+	 
+}
+
+
+div.site{
+	
+	width: 1400px;
+	height : 1700px;
+	margin : 0px auto ;
+	background  : linear-gradient(#00B64F, white 100%);
+	
+}
+header{
+	height: 200px;
+	
+	text-align:center;
+	font-size:16pt;
+	font-family:Comic sans ms;
+	color:green;
+}
+
+a{
+	
+	text-decoration:none;
+	font-family:Comic sans ms;
+	
+	color :yellow;
+	border-collapse: collapse;
+	border:1px solid yellow;
+	
+}
+nav{
+	width:1399px;
+	height:45px;
+	margin-top:5px;
+	border-top-left-radius:4px;
+	border-bottom-right-radius:4px;
+	background-color:#007633;
+	
+	text-align:center;
+}
+a:hover{
+	background-color:chartreuse;
+	color:black;
+	
+}
+table.fleur{
+	border : 2px solid yellow;
+	font-family:Comic sans ms;
+	margin:0px auto;
+	width:1000px;
+	margin-top:50px;
+	text-align:center;
+}
+td{
+	border:1px solid yellow ;
+	width:100px;
+	height:100px;
+	
+	
+	
+}
+table.plantes{
+	border : 2px solid yellow;
+	font-family:comic sans ms;
+	margin:0px auto;
+	width:1000px;
+	margin-top:50px;
+}
+td.titre{
+	text-align:left;
+}
+form{
+	margin:0px auto ;
+	width : 200px;
+	font-family :arial;
+	color:green;
+}
+table.compo{
+	border : 2px solid yellow;
+	font-family:comic sans ms;
+	margin:0px auto;
+	width:1000px;
+	margin-top:50px;
+}
+table.boutique{
+	border : 2px solid yellow;
+	font-family:comic sans ms;
+	margin:0px auto;
+	width:1000px;
+	margin-top:50px;
+}
