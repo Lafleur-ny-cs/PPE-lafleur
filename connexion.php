@@ -18,16 +18,40 @@
 				<a href="connexion.php">Connexion</a>
 			</nav>
 			<form id="auto" name="forAuto" method="post" action="admin.php">
-			<fieldset>
-				Login<input type="texte" id="txtLogin" name="txtLogin" requiered=""/>
-				Mot De Passe<input type="password" id="pwd" name="pwd" requiered=""/>
-				<input  id="effacer" name="effacer" type="reset"  value="Effacer"/><input id="valider" name="valider" type="submit"" value="Valider"/>
-			</fieldset>
+				<fieldset>
+					Login :<input type="text" id="txtLogin" name="txtLogin" requiered="required"/>
+					Mot De Passe :<input type="text" id="txtpwd" name="txtpwd" requiered="required"/>
+					<input  id="effacer" name="effacer" type="reset"  value="Effacer"/><input id="valider" name="valider" type="submit"" value="Connexion"/>
+				</fieldset>
 			</form>
 			
 			<?php 
-			
-			
+				if(isset($_POST['valider'])&& isset($_POST['txtLogin'])&& isset($_POST['txtpwd'])){
+					
+					$login=$_POST['txtLogin'];
+					$pass=$_POST['txtpwd'];
+
+					try {
+							$pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
+							$bdd = new PDO('mysql:host='.'localhost'.';dbname='.'lafleur_vitrine','root');
+							$reponseReq = $bdd->prepare('SELECT * FROM user WHERE loginUser = :login');
+							$reponseReq->execute(array(
+									'login'=>$login
+									
+							));
+							$donnees = $reponseReq->fetch();
+							if($pass==$donnees['pwdUser']){
+								header('location: admin.php');
+							}
+							else{
+								echo'erreur';
+							}
+					}
+					catch (Exception $erreur){
+						die('Il y a une erreur dans la bdd');
+
+					}
+				}
 			?>
 			
 		</div>
