@@ -12,7 +12,7 @@
 			
 			</header>
 			<nav>
-				<a href="Page-acceuil.html">Accueil</a>
+				<a href="index.php">Accueil</a>
 				<a href="produit.php">Nos Produits</a>
 				<a href="boutiques.php">Nos Boutiques</a>
 				<a href="connexion.php">Connexion</a>

@@ -56,7 +56,7 @@
 								
 							}
 							else{
-								echo'erreur';
+								echo'Login ou mot de passe incorect';
 							}
 					}
 					catch (Exception $erreur){
