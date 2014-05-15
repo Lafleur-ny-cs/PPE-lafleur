@@ -1,3 +1,6 @@
+<?php session_start()
+?>
+
 <!DOCTYPE html>
 	<html>
 	<head>
@@ -12,36 +15,45 @@
 			
 			</header>
 			<nav>
-				<a href="Page-acceuil.html">Accueil</a>
+				<a href="index.php">Accueil</a>
 				<a href="produit.php">Nos Produits</a>
 				<a href="boutiques.php">Nos Boutiques</a>
 				<a href="connexion.php">Connexion</a>
 			</nav>
-			<form id="auto" name="forAuto" method="post" action="admin.php">
+			<form id="auto" name="forAuto" method="get" action="connexion.php">
 				<fieldset>
-					Login :<input type="text" id="txtLogin" name="txtLogin" requiered="required"/>
-					Mot De Passe :<input type="text" id="txtpwd" name="txtpwd" requiered="required"/>
+					Login :<input type="text" id="txtLogin" name="txtLogin" required="required"/>
+					Mot De Passe :<input type="text" id="txtpwd" name="txtpwd" required="required"/>
 					<input  id="effacer" name="effacer" type="reset"  value="Effacer"/><input id="valider" name="valider" type="submit"" value="Connexion"/>
 				</fieldset>
 			</form>
 			
 			<?php 
-				if(isset($_POST['valider'])&& isset($_POST['txtLogin'])&& isset($_POST['txtpwd'])){
+				if(isset($_GET['valider'])&& isset($_GET['txtLogin'])&& isset($_GET['txtpwd'])){
 					
-					$login=$_POST['txtLogin'];
-					$pass=$_POST['txtpwd'];
+					$login=$_GET['txtLogin'];
+					$pass=$_GET['txtpwd'];
+					//$statut= $_GET['statutUser'];
 
 					try {
 							$pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
 							$bdd = new PDO('mysql:host='.'localhost'.';dbname='.'lafleur_vitrine','root');
-							$reponseReq = $bdd->prepare('SELECT * FROM user WHERE loginUser = :login');
+							$reponseReq = $bdd->prepare('SELECT * FROM users WHERE loginUser = :login AND pwdUser = :pwd');
 							$reponseReq->execute(array(
-									'login'=>$login
+									'login'=>$login,
+									'pwd' => $pass
 									
 							));
-							$donnees = $reponseReq->fetch();
-							if($pass==$donnees['pwdUser']){
+							
+							//echo $login.$pass;
+							$nb = $reponseReq->rowCount();
+							//echo $nb ;
+							if($nb >=1){
+								$donnees = $reponseReq->fetch();
+								$_SESSION['txtLogin']=$login;
+								$_SESSION['statutUser']=$donnees['statutUser'];
 								header('location: admin.php');
+								
 							}
 							else{
 								echo'erreur';

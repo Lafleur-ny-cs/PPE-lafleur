@@ -1,3 +1,5 @@
+<?php session_start()
+?>
 <!DOCTYPE html>
 	<html>
 	<head>
@@ -14,8 +16,8 @@
 			<nav>
 				<a href="admin.php">Accueil</a>
 				<a href="produit-admin.php">Nos Produits</a>
-				<a href="boutiques.php">Nos Boutiques</a>
-				<a href="Page-acceuil.html">Déconnexion</a>
+				<a href="boutiques-admin.php">Nos Boutiques</a>
+				<a href="index.php">Deconnexion</a>
 			</nav>
 				<form id="formChoix" method="post" action="produit-admin.php">
 					<fieldset>

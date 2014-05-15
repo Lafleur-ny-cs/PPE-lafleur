@@ -18,13 +18,14 @@
 				<a href="admin.php">Accueil</a>
 				<a href="produit-admin.php">Nos Produits</a>
 				<a href="boutiques.php">Nos Boutiques</a>
-				<a href="Page-acceuil.html">Déconnexion</a>
+				<a href="index.php">Deconnexion</a>
 				
 			
 			</nav>
 			<br/>
 			<h2>Espace admin</h2>
-		
+			</br>
+			Bienvenue en espace administrateur <?php echo $_SESSION['txtLogin'];?>
 		
 		
 		

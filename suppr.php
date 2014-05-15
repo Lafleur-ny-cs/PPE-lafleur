@@ -1,4 +1,5 @@
-
+<?php session_start()
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -13,12 +14,10 @@
 				
 			</header>
 			<nav>
-				<a href="Page-acceuil.html">Accueil</a>
-				<a href="fleur.php">Nos Fleurs</a>
-				<a href="compo.php">Nos Compositions</a>
-				<a href="plante.php">Nos Plantes</a>
-				<a href="boutiques.php">Nos Boutiques</a>
-				
+				<a href="admin.php">Accueil</a>
+				<a href="produit-admin.php">Nos Fleurs</a>
+				<a href="boutiques-admin.php">Nos Boutiques</a>
+				<a href="index.php">Deconnexion</a>
 				
 				
 				

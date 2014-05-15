@@ -12,7 +12,7 @@
 			
 			</header>
 			<nav>
-				<a href="Page-acceuil.html">Accueil</a>
+				<a href="index.php">Accueil</a>
 				<a href="produit.php">Nos Produits</a>
 				<a href="boutiques.php">Nos Boutiques</a>
 				<a href="connexion.php">Connexion</a>
@@ -24,10 +24,11 @@
 			<br/>
 			<div class="intro">
 			<img src="img/camelia1.jpg"/>
+			
+			
 			</div>
 		
-		
-		
+		<?php session_destroy()?>
 		
 		</div>
 
