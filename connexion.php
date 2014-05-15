@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<link rel="stylesheet" type="text/css" media="screen" href="css/produit-admin.css" />
-		<title>Produit-admin</title>
+		<title>Connexion</title>
 	</head>
 	<body>
 		<div class="site">

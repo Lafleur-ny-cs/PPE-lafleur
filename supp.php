@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<link rel="stylesheet" type="text/css" media="screen" href="css/suppr.css" />
-		<title>Fleurs-admin</title>
+		<title>Suppression?</title>
 	</head>
 	<body background="prairie2.css" style="background-repeat:no-repeat;">
 		<?php if(isset($_SESSION['txtLogin'])){?>		

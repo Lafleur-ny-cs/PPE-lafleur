@@ -5,7 +5,7 @@
 	<head>
 	<meta charset="ISO-8859-1">
 	<link rel="stylesheet" type="text/css" media="screen" href="css/produit-admin.css" />
-	<title>Fleurs-admin</title>
+	<title>Suppr-traitement</title>
 	</head>
 	<body background="prairie2.css" style="background-repeat:no-repeat;">
 		<?php if(isset($_SESSION['txtLogin'])){?>		
